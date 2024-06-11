@@ -7,6 +7,7 @@ class ImageConverter:
         self.rows = rows  # Количество рядов в изображении алфавита
         self.cols = cols  # Количество колонок в изображении алфавита
         self.alphabet_dict = self._create_alphabet_dict(alphabet_image, rows, cols)  # Заполнение словаря алфавита
+        
 
     def _create_alphabet_dict(self, image, rows, cols):
         width, height = image.size  # Размеры изображения
@@ -46,8 +47,8 @@ class ImageConverter:
                     continue
                 if char.upper() in self.alphabet_dict:  # Проверка, что символ есть в алфавите
                     char_image = self.alphabet_dict[char.upper()]  # Получение изображения символа
-                    x = char_index * char_width  # Координата X для вставки символа
-                    y = line_index * char_height  # Координата Y для вставки символа
+                    x = char_index * (char_width)   # Координата X для вставки символа
+                    y = line_index * (char_height) # Координата Y для вставки символа
                     output_image.paste(char_image, (x, y))  # Вставка символа в итоговое изображение
 
         if thumbnail_size:  # Проверка на наличие размера для уменьшения изображения
