@@ -15,7 +15,7 @@ class ImageConverter:
         cell_height = height // rows  # Высота одной ячейки
         alphabet_dict = {}  # Словарь для хранения изображений символов
 
-        letters = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'  # Русский алфавит
+        letters = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ'  # Русский алфавит
         index = 0
 
         for row in range(rows):
